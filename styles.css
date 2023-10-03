@@ -1,57 +1,107 @@
 /* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
 }
 
 header {
-    text-align: center;
     background-color: #0077b6;
     color: white;
-    padding: 60px 0;
-    font-family: 'Helvetica Neue', sans-serif;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header h1 {
-    font-size: 36px;
-    margin: 0;
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
-header p {
-    font-size: 18px;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 section {
-    margin: 20px;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
 }
 
 section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
     color: #0077b6;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Style for the Recommended Pricing Package */
+.package.recommended {
+    background-color: #ff6b6b;
+    color: white;
+    border: 2px solid #ff6b6b;
 }
 
-li {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-footer {
+.package {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    margin: 10px;
+}
+
+button {
     background-color: #0077b6;
     color: white;
-    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005b8f;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Style for social media links */
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #0077b6;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
